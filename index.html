@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu UI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  
+
+    <style>
+
+
+        /* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, rgb(105, 24, 4), rgb(105, 24, 4)); /* Orange gradient */
+  color: white;
+  display: flex;
+  display: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+
+
+}
+
+.yami001{
+  background-image: url(./iamges/WhatsApp\ Image\ 2024-11-16\ at\ 12.00.48\ AM.jpeg) ;
+  height: 100%;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF4500;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 16px;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Food Menu Section */
+.food-menu {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.food-card {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  width: 160px;
+  text-align: center;
+  padding: 10px;
+  display: wrap;
+  box-shadow: 0 0 15px #250253f6, 0 0 30px #250253f6;
+}
+.food-card-mega{
+    background: white;
+  color: white;
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  display: wrap;
+   box-shadow: 0 0 15px #1d5a0d, 0 0 30px orange;
+box-shadow: 0 0 15px red, 0 0 30px red;
+}
+.food-card-mega{
+    width: 50%;
+    border-radius: 10px;
+    background-color: gray;
+
+
+}
+.food-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.food-info {
+  padding-top: 10px;
+}
+
+.food-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+.price1 {
+  color: white;
+  font-weight: bold;
+}
+
+
+.food-title1 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.yami{
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px;
+  width: 80%;
+  margin-left: 15px;
+  box-shadow: 0 0 10px #250253f6, 0 0 20px #250253f6;
+ /* text-decoration: none; */
+  
+}
+
+a{
+ text-decoration: none;
+
+}
+.yami1{
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px;
+  width: 70%;
+  margin-left: 100px;
+ text-decoration: none;
+  
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.contact-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s ease;
+            box-shadow: 0 0 10px red, 0 0 20px red;
+        }
+
+
+
+@media (max-width: 600px) {
+  .food-menu {
+    flex-direction: column;
+  }
+  .food-card {
+    width: 100%;
+  }
+}
+
+ .ai-icon {
+    font-size: 1.5rem;
+    color: #333;
+    margin-left: -3rem;
+    background-color: #f5f5f5;
+    padding: 0.2rem;
+    border-radius: 50%;
+    border: 2px black;
+}
+
+.ai-search input[type="text"] {
+    padding: 0.5rem;
+    width: 100%;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.img1{
+    width: 100%;
+    border: 2px;
+    margin-top: -4rem;
+ 
+    border-radius: 18px;
+    box-shadow: 0 0 15px #1d5a0d, 0 0 30px orange;
+    background-image: 2px;
+}
+
+.img87{
+    width: 30%;
+    border: 2px;
+    margin-left: -60rem;
+    margin-bottom: -5rem;
+    border-radius: 18px;
+    box-shadow: 0 0 20px #0b0355, 0 0 40px #0b0355;
+}
+
+.img79{
+    width: 30%;
+    border: 2px;
+    margin-right: -60rem;
+    margin-top: -5rem;
+    margin-bottom: -2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 0 20px #0b0355, 0 0 40px #0b0355;
+}
+
+
+
+
+
+.icon-bar {
+  position: fixed;
+  top: 75%;
+  right:0px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+.whatsapp{
+	background:#25D366;
+	color: white;
+}
+.telegram{
+	background:#229ED9;
+	color: white;
+}
+.email{
+	background:coral;
+	color: white;
+}
+.mobile{
+	background:#cc33ff;
+	color: white;
+}
+
+.yami008{
+  box-shadow: 0 0 10px black, 0 0 20px black;
+}
+
+
+
+
+    </style>
+
+  <!-- Header Section -->
+  <header>
+    <h1 style="background-color: black; color: green;">SOCIAL MEDIA PROVIDER</h1>
+    <a href="https://wa.link/37h6h9" class="contact-btn whatsapp" target="_blank"><h1 style="color: red;">𝒀𝑨𝑴𝑰</h1></a>
+    <br>
+    <div>
+      <img class="img87" src="https://i.postimg.cc/zGFtLCHR/Whats-App-Image-2024-11-03-at-11-11-32-PM.jpg" alt="">
+  </div>
+<br>
+<div>
+ 
+  
+ 
+    <img class="img79" src="https://i.postimg.cc/ZYQL0ffQ/dark-logo.jpg" alt="">
+</div>
+  <br>
+<div>
+  <img class="img1" src="./iamges/8.jpg" alt="">
+
+</div>
+<br>
+<div>
+ 
+  
+  
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    
+     
+    <input class="yami008" type="text" placeholder="Search Service..." >
+
+    <a href="https://web.whatsapp.com/" class="ai-icon">&#128640;</a>
+                <!--<span class="ai-icon">&#128640;</span>-->
+                <a href="https://web.whatsapp.com/"></a>
+  </div>
+
+  
+</div>
+
+<h1 style="color: red; background-color: black;">TikTok Services</h1>
+<br>
+
+  <!-- Food Menu Section -->
+  <section class="food-menu">
+    <!-- Food Card -->
+    <div class="food-card">
+      <img src="./iamges/download (5).jpg" alt="Fast Food">
+      <div class="food-info">
+        <p class="food-title">1k FOLLOWERS</p>
+        <p class="price">RS=150</p>
+        
+        <a href="https://wa.link/vej412"><h1 class="yami">order now</h1></a>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="./iamges/download (5).jpg" alt="Fried Chicken">
+      <div class="food-info">
+        <p class="food-title">1k Likes</p>
+        <p class="price">RS=50</p>
+        <a href="https://wa.link/3j8p7l"><h1 class="yami">order now</h1></a>
+      </div></a>
+    </div>
+
+
+    <div class="food-card">
+        <img src="./iamges/download (5).jpg" alt="Fried Chicken">
+        <div class="food-info">
+          <p class="food-title">10k views</p>
+          <p class="price">RS=10</p>
+         
+          <a href="https://wa.link/2whu55"><h1 class="yami">order now</h1></a>
+        </div>
+      </div>
+    </section>
+<br>
+<h1 style="color: red; background-color: black;">MEGA OFFER</h1>
+<br>
+
+
+      <div class="food-card-mega">
+        <img src="./iamges/download (5).jpg" alt="Fried Chicken">
+        <div class="food-info">
+          <p class="food-title1">1k FOLLOWERS+ <br>1k likes+ <br>10k views
+          <br>
+          </p>
+          <p class="price1">RS=180</p>
+          
+          <a href="https://wa.link/23371u"><h1 class="yami1">order now</h1></a>
+        </div>
+      </div>
+
+      <br>
+      <h1 style="color: red; background-color: black;">INSTAGRAM Services</h1>
+     <br>
+      <section class="food-menu">
+        <!-- Food Card -->
+        <div class="food-card">
+          <img src="./iamges/download (6).jpg" alt="Fast Food">
+          <div class="food-info">
+            <p class="food-title">1k FOLLOWERS</p>
+            <p class="price">RS=150</p>
+            
+            <a href="https://cdnjs.com/libraries/font-awesome"><h1 class="yami">order now</h1></a>
+          </div>
+        </div>
+
+        <div class="food-card">
+            <img src="./iamges/download (6).jpg" alt="Fast Food">
+            <div class="food-info">
+              <p class="food-title">1k LIKES</p>
+              <p class="price">RS=50</p>
+              
+              <a href="https://cdnjs.com/libraries/font-awesome"><h1 class="yami">order now</h1></a>
+            </div>
+          </div>
+
+
+          <div class="food-card">
+            <img src="./iamges/download (6).jpg" alt="Fast Food">
+            <div class="food-info">
+              <p class="food-title">10k VIEWS</p>
+              <p class="price">RS=30</p>
+              
+              <a href="https://cdnjs.com/libraries/font-awesome"><h1 class="yami">order now</h1></a>
+            </div>
+          </div>
+        </section>
+        <br>
+        <h1 style="color: red; background-color: black;">MEGA OFFER</h1>
+        <br>
+
+        <div class="food-card-mega">
+            <img src="./iamges/download (6).jpg" alt="Fried Chicken">
+            <div class="food-info">
+              <p class="food-title1">1k FOLLOWERS+ <br>1k likes+ <br>10k views
+              <br>
+              </p>
+              <p class="price1">RS=180</p>
+              <a href="https://cdnjs.com/libraries/font-awesome"><h1 class="yami1">order now</h1></a>
+            </div>
+          </div>
+
+
+          <br>
+          <h1 style="color: red; background-color: black;">SNACK VIDEO Services</h1>
+         <br>
+
+         <section class="food-menu">
+            <!-- Food Card -->
+            <div class="food-card">
+              <img src="./iamges/7.png" alt="Fast Food">
+              <div class="food-info">
+                <p class="food-title">1k FOLLOWERS</p>
+                <p class="price">RS=150</p>
+                
+                <a href="https://wa.link/vej412"><h1 class="yami">order now</h1></a>
+              </div>
+            </div>
+        
+           
+                <!-- Food Card -->
+                <div class="food-card">
+                  <img src="./iamges/7.png" alt="Fast Food">
+                  <div class="food-info">
+                    <p class="food-title">1k LIKES</p>
+                    <p class="price">RS=50</p>
+                    
+                    <a href="https://wa.link/vej412"><h1 class="yami">order now</h1></a>
+                  </div>
+                </div>
+
+                
+               
+                    <!-- Food Card -->
+                    <div class="food-card">
+                      <img src="./iamges/7.png" alt="Fast Food">
+                      <div class="food-info">
+                        <p class="food-title">1k views</p>
+                        <p class="price">RS=150</p>
+                        
+                        <a href="https://wa.link/vej412"><h1 class="yami">order now</h1></a>
+                      </div>
+                    </div>
+                </section>
+
+
+                              <br>
+                              
+                <h1 style="color: red; background-color: black;">MEGA OFFER</h1>
+                <br>
+        
+                <div class="food-card-mega">
+                    <img src="./iamges/7.png" alt="Fried Chicken">
+                    <div class="food-info">
+                      <p class="food-title1">1k FOLLOWERS+ <br>1k likes+ <br>10k views
+                      <br>
+                      </p>
+                      <p class="price1">RS=180</p>
+                      <a href="https://cdnjs.com/libraries/font-awesome"><h1 class="yami1">order now</h1></a>
+                    </div>
+                  </div>
+                  <br>
+                  <h1 style="background-color: black; color: red;">FACEBOOK Service</h1>
+                  <br>
+                  
+
+ <section class="food-menu">
+                  <div class="food-card">
+      <img src="./iamges/images10.jpg" alt="Fried Chicken">
+      <div class="food-info">
+        <p class="food-title">1k Likes</p>
+        <p class="price">RS=50</p>
+        <a href="https://wa.link/3j8p7l"><h1 class="yami">order now</h1></a>
+      </div></a>
+    </div>
+
+
+     <div class="food-card">
+      <img src="./iamges/images10.jpg" alt="Fried Chicken">
+      <div class="food-info">
+        <p class="food-title">1k Likes</p>
+        <p class="price">RS=50</p>
+        <a href="https://wa.link/3j8p7l"><h1 class="yami">order now</h1></a>
+      </div></a>
+    </div>
+
+ <div class="food-card">
+      <img src="./iamges/images10.jpg" alt="Fried Chicken">
+      <div class="food-info">
+        <p class="food-title">1k Likes</p>
+        <p class="price">RS=50</p>
+        <a href="https://wa.link/3j8p7l"><h1 class="yami">order now</h1></a>
+      </div></a>
+    </div>
+         </section>
+
+           <br>
+                              
+                <h1 style="color: red; background-color: black;">MEGA OFFER</h1>
+                <br>
+        
+                <div class="food-card-mega">
+                    <img src="./iamges/images10.jpg" alt="Fried Chicken">
+                    <div class="food-info">
+                      <p class="food-title1">1k FOLLOWERS+ <br>1k likes+ <br>10k views
+                      <br>
+                      </p>
+                      <p class="price1">RS=180</p>
+                      <a href="https://cdnjs.com/libraries/font-awesome"><h1 class="yami1">order now</h1></a>
+                    </div>
+                  </div>
+                  <br>
+                 
+                  
+
+        
+      </body>
+      </html>
+
+
+
+     
+
+
+
+      
+      
+
+
+
+
+      
+
+
+
+   
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#">Home</a>
+    <a href="#">Cart</a>
+    <a href="#">Favorites</a>
+    <a href="#">Profile</a>
+  </nav>
+  <nav  class="button-nav">
+    <a href="#">Home</a>
+    <a href="#">Cart</a>
+
+
+  </nav>
+
+
+  <script>
+    async function apiHandler() {
+      try {
+        var data;
+        await fetch('https://paksimdatadevapi.free.nf/simownerdetail.php?phone_number=')
+
+          .then(res => res.json())
+          .then(json => data = json)
+
+        console.log("data===>", data);
+
+
+      } catch (error) {
+        console.log(error.message);
+
+      }
+    }
+
+    apiHandler()
+  </script>
+
+  
+</body>
+</html>
